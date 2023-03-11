@@ -1,0 +1,15 @@
+#update {
+    display: none;
+}
+
+body {
+    background-color: rgb(2, 31, 16);
+}
+
+h1 {
+    color: rgb(184, 179, 179);
+}
+
+.hide {
+    display: none;
+}

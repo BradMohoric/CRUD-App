@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Manager</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body class="container">
+    
+   <h1 class="text-center">Band Manager</h1>
+
+
+        <div class="card-body">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" name="genre" class="form-control" id="genre" placeholder="Genre">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" name="location" class="form-control" id="location" placeholder="Location">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <button class="btn btn-success" id="submit" onclick="addData()">Add Band</button>
+                        <button class="btn btn-primary" id="update">Update</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="alert alert-warning hide" role="alert" id="alertEmail1">
+            Please enter an email address
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+        <div class="alert alert-warning hide" role="alert" id="alertEmail2">
+            Please enter a valid email address
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+        <div class="alert alert-warning hide" role="alert" id="alertName">
+            Please enter a name
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+        <div class="alert alert-warning hide" role="alert" id="alertLocation">
+            Please enter a location
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+        <div class="alert alert-warning hide" role="alert" id="alertGenre">
+            Please enter a genre
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+
+
+        
+        <hr>
+        <div class="container table-responsive">
+            <div>
+                <table class="table table-dark table-hover" id="crudTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Genre</th>
+                            <th>Location</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="crud.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>    
+</body>
+</html>
